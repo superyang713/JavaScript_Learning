@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Callback function</title>
+  </head>
+  <body>
+    <script>
+      var assert = require("assert");
+      var store = {
+	  nextId: 1,
+	  cache: {},
+	  add: function(fn) {
+	      if (!fn.id) {
+		  fn.id = this.nextId++;
+		  this.cache[fn.id] = fn;
+		  return true;
+	      }
+	  }
+      }
+      function ninja(){}
+      assert(store.add(ninja),
+	     "Function was safely added.");
+      assert(!store.add(ninja),
+	     "But it was only added once!");
+    </script>
+  </body>
+</html>
