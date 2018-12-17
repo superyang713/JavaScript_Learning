@@ -1,3 +1,13 @@
+/*
+call and apply, can come in handy whenever it's expedient to usurp
+what would normally be the function context with an object of our own
+chosing-something that cna be particaularly useful when invoking
+callback functions.
+*/
+
+
+var assert = require("assert");
+
 function juggle() {
     var result = 0;
     for (var n = 0; n < arguments.length; n++) {
