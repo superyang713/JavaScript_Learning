@@ -1,3 +1,5 @@
+var assert = require('assert');
+
 function isPrime(value) {
     if (!isPrime.answers) {
 	isPrime.answers = {};
@@ -19,4 +21,4 @@ function isPrime(value) {
 }
 
 assert(isPrime(5), "5 is prime!");
-assert(isprime.answers[5], "The answer was cached!");
+assert(isPrime.answers[5], "The answer was cached!");
