@@ -8,7 +8,7 @@ class Rabbit {
 }
 
 let killerRabbit = new Rabbit("killer");
-let whiteRabbit = new Rabbit("black");
+let blackRabbit = new Rabbit("black");
 
 killerRabbit.speak("hello");
 
